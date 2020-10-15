@@ -1,0 +1,13 @@
+@import '../../assets/variables';
+
+.avatar {
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}

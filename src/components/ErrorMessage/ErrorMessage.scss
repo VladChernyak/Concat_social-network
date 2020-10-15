@@ -1,0 +1,14 @@
+@import '../../assets/variables';
+
+.error-message {
+  color: $font-grey;
+  text-align: center;
+  opacity: 0.7;
+  .sad-icon {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}

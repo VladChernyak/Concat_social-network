@@ -1,0 +1,41 @@
+@import '../../assets/variables';
+
+.addPost {
+  margin-top: 30px;
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: #f1f4f8;
+    border-radius: 10px;
+  }
+  .controlPanel {
+    margin-top: 15px;
+    .addPhoto {
+      margin-left: 15px;
+      vertical-align: middle;
+      color: $font-grey;
+      cursor: pointer;
+      input {
+        display: none;
+      }
+      .camera-icon {
+        display: inline-block;
+        width: 16px;
+        vertical-align: middle;
+      }
+    }
+    button:not(:first-child) {
+      margin-left: 15px;
+    }
+  }
+  .image-preview {
+    max-width: 200px;
+    img {
+      width: 100%;
+    }
+  }
+}

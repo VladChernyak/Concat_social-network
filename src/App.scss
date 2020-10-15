@@ -1,0 +1,27 @@
+@import './assets/variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+button,
+a {
+  outline: none;
+}
+
+html,
+body,
+.wrapper {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,11 @@
+@import '../../assets/variables';
+
+.indicator {
+  padding: 0 0.35em;
+  border-radius: 1em;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  background-color: $red;
+}

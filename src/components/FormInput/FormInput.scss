@@ -1,0 +1,14 @@
+@import '../../assets/variables';
+
+.form-input {
+  border: 1px solid $font-grey;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.form-input.not-valid {
+  color: $red;
+  border-color: $red;
+}

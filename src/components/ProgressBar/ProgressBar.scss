@@ -1,0 +1,14 @@
+@import '../../assets/variables';
+
+.progressBar {
+  border: none;
+  height: 5px;
+  &::-webkit-progress-bar {
+    background: #fff;
+  }
+  &::-webkit-progress-value {
+    transition: 0.15s;
+    background-color: $blue;
+    border-radius: 50px;
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../assets/variables';
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  &__inner {
+    max-width: 700px;
+    display: flex;
+    align-items: flex-start;
+  }
+  &__sendInfo {
+    text-align: center;
+  }
+  time {
+    display: block;
+    font-size: 12px;
+    color: $font-grey;
+    margin-top: 10px;
+    max-width: 50px;
+  }
+  &__content {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+  &__sender {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &.interlocutor__message {
+    .message__content {
+      background-color: rgba(161, 161, 161, 0.2);
+    }
+    time {
+      margin: 5px auto 0;
+    }
+  }
+  &.user__message {
+    .message__inner {
+      align-items: center;
+      margin-left: auto;
+    }
+    .message__sendInfo {
+      margin-left: 10px;
+      margin-right: 0;
+      .avatar {
+        display: none;
+      }
+      time {
+        margin-top: 0;
+      }
+    }
+    .message__content {
+      order: -1;
+      color: #fff;
+      margin-left: auto;
+      background-color: $blue;
+    }
+    .message__sender {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .message {
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '../../assets/variables';
+
+button.reg__btn {
+  background-color: $font-grey;
+  &:hover:not([disabled]) {
+    background-color: lighten($font-grey, 5%);
+  }
+}

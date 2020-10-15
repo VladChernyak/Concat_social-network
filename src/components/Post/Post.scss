@@ -1,0 +1,94 @@
+@import '../../assets/variables';
+
+.post {
+  margin-top: 20px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: addPost 0.2s;
+  animation-fill-mode: forwards;
+  &__info {
+    display: flex;
+    align-items: center;
+    time {
+      color: $font-grey;
+      font-size: 14px;
+    }
+  }
+  &__infoText {
+    margin-left: 15px;
+  }
+  &__authorPhoto {
+    width: 70px;
+    height: 70px;
+  }
+  &__text {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    max-width: 800px;
+  }
+  &__image {
+    max-height: 400px;
+    margin-bottom: 15px;
+    img {
+      max-width: 100%;
+      max-height: 400px;
+      border-radius: 10px;
+      max-height: inherit;
+    }
+  }
+  &__like {
+    background: none;
+    border: none;
+    outline: none;
+    color: $font-grey;
+    cursor: pointer;
+    .like-icon {
+      vertical-align: middle;
+      display: inline-block;
+      .heart-icon {
+        width: 20px;
+      }
+    }
+    &.active .like-icon {
+      color: $pink;
+      animation: like 0.2s;
+    }
+    .like-count {
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+  }
+  &__remove {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $font-grey;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    .cross-icon {
+      width: 15px;
+    }
+  }
+  &:hover {
+    .post__remove {
+      display: block;
+    }
+  }
+}
+
+@keyframes addPost {
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes like {
+  50% {
+    transform: scale(1.4);
+  }
+}

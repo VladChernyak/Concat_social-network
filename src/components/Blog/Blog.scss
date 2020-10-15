@@ -1,0 +1,32 @@
+@import '../../assets/variables';
+
+.blog {
+  margin: 40px auto;
+  padding: 25px 50px;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: $card-shadow;
+  &__posts {
+    margin-top: 50px;
+    &-count {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      background-color: $blue;
+      border-radius: 50px;
+      color: #fff;
+      padding: 0.05em 0.5em;
+      text-align: center;
+      line-height: 1.5em;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .blog {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

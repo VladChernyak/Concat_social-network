@@ -1,0 +1,84 @@
+@import '../../assets/variables';
+
+.dialog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  &__title {
+    display: flex;
+  }
+  h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+  }
+  .line {
+    color: $font-grey;
+    height: 1px;
+    background-color: rgb(158, 158, 158);
+  }
+  &__close {
+    border: none;
+    outline: none;
+    background: none;
+    display: none !important;
+    color: rgb(158, 158, 158);
+    margin-right: 15px;
+    .arrow-left-icon {
+      width: 16px;
+      vertical-align: middle;
+    }
+  }
+  &__messages {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    max-height: 60vh;
+    flex-grow: 1;
+    overflow-y: scroll;
+    max-height: 100%;
+    @include scrollbar;
+  }
+  &__no-messages {
+    color: $font-grey;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-right: 20px;
+    textarea {
+      resize: none;
+      background: none;
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 15px;
+    }
+    .sendButton {
+      border: none;
+      background: none;
+      outline: none;
+      border-radius: 50%;
+      color: $blue;
+      cursor: pointer;
+      &[disabled] {
+        opacity: 0.5;
+      }
+      .arrow-in-circle-top {
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .dialog {
+    &__close {
+      display: inline-block !important;
+    }
+  }
+}

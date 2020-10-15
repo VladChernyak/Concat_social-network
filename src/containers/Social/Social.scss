@@ -1,0 +1,31 @@
+@import '../../assets/variables';
+
+.social {
+  padding-top: 20px;
+  width: 500px;
+  height: 100%;
+  h1 {
+    text-align: center;
+  }
+  &__search {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 35px;
+    border-radius: 15px;
+    background-color: #fff;
+  }
+  .loader {
+    margin-top: 200px;
+  }
+  .social__list {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 625px) {
+  .social {
+    width: 100%;
+  }
+}

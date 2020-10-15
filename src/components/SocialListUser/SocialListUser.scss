@@ -1,0 +1,45 @@
+@import '../../assets/variables';
+
+.user {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: $card-shadow;
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  h3 {
+    margin-left: 20px;
+  }
+  &__actions {
+    margin-left: auto;
+    padding-left: 10px;
+    .profileButton {
+      background-color: $font-grey;
+    }
+    .messageButton {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .social {
+    .user {
+      margin-bottom: 15px;
+      .avatar {
+        width: 60px;
+        height: 60px;
+      }
+      h3 {
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

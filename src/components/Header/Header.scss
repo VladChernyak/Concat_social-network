@@ -1,0 +1,78 @@
+@import '../../assets/variables';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 101;
+  &__burger {
+    border: none;
+    background: none;
+    position: fixed;
+    display: none;
+    width: 25px;
+    height: 5px;
+    top: 30px;
+    left: 15px;
+    &.opened {
+      .line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        &:first-child {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &:last-child {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+    }
+    .inner {
+      position: relative;
+    }
+    .line {
+      width: 25px;
+      height: 2px;
+      opacity: 0.8;
+      background-color: $font-grey;
+      transition: 0.2s;
+      &:first-child {
+        margin-bottom: 3px;
+      }
+    }
+  }
+  .logo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    &__icon {
+      color: $blue;
+      .cat-icon {
+        width: 30px;
+      }
+    }
+    &__name {
+      color: $font-grey;
+      font-weight: 700;
+      font-size: 25px;
+      margin-left: 10px;
+      span {
+        color: $blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .header__burger {
+    display: block;
+  }
+}

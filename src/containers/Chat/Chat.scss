@@ -1,0 +1,67 @@
+@import '../../assets/variables';
+
+.chat {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 25px;
+  margin-left: 30px;
+  &__avatar {
+    width: 70px;
+    height: 70px;
+  }
+  &__leftSide,
+  &__rightSide {
+    max-height: calc(100vh - 125px);
+  }
+  &__leftSide {
+    position: relative;
+    width: 400px;
+    z-index: 10;
+  }
+  &__rightSide {
+    position: relative;
+    flex-grow: 1;
+    margin-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1440px) {
+  .chat {
+    position: relative;
+    margin-left: 0;
+    &__leftSide {
+      position: absolute;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+      height: 100%;
+      background-color: $background-color;
+      box-shadow: 10px 0 10px -10px #777;
+      transform: translateX(-110%);
+      transition: 0.3s;
+      &.opened {
+        transform: translateX(0);
+      }
+    }
+    &__rightSide {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .chat__rightSide,
+  .chat__leftSide {
+    padding: 0;
+  }
+}

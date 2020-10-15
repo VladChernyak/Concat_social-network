@@ -1,0 +1,25 @@
+.page {
+  height: 100vh;
+  padding-top: 100px;
+  padding-left: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 1025px) {
+  .page {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 426px) {
+  .page {
+    padding-left: 0;
+  }
+}

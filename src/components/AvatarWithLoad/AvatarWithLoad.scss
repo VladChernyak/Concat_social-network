@@ -1,0 +1,43 @@
+@import '../../assets/variables';
+
+.avatar {
+  &:hover {
+    .avatar__load-new {
+      opacity: 1;
+    }
+  }
+  &__load-new {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+    label {
+      cursor: pointer;
+      .camera-icon {
+        color: rgb(231, 231, 231);
+        width: 35px;
+      }
+    }
+    input {
+      display: none;
+    }
+  }
+  &__progressbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+  }
+}

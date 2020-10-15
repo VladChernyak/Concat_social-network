@@ -1,0 +1,16 @@
+$background-color: #f2f3f7;
+$font-grey: #6c8393;
+$blue: #4c6fff;
+$card-shadow: 0 0 10px -3px #777;
+$pink: #ff73e5;
+$red: rgb(255, 62, 62);
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #b1b1b1;
+    border-radius: 10px;
+  }
+}
